@@ -9,7 +9,7 @@ const Header = () => {
     const [searchInput, setSearchInput] = useState<string>("")
     const searchInputRef = useRef<HTMLInputElement>(null)
 
-    const filterMovies = (action?: "yearUp" | "yearDown" | "bestRating" | "az" | "za" | "search") => {
+    const filterMovies = (action: "yearUp" | "yearDown" | "bestRating" | "az" | "za" | "search") => {
         if(action === "yearUp") {
             setMovies({
                 ...movies,

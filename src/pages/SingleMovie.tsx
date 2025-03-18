@@ -10,14 +10,11 @@ const SingleMovie = () => {
     const {movies} = useContext(mainContext) as any
     const [singleMovie, setSingleMovie] = useState<Movie>()
 
-    if(movieParam) {
-        const testMovies = [...movies.allMovies]
-        setSingleMovie(testMovies.find((movie:Movie) => transformTitle(movie.title).includes(movieParam)))
-    }
-    
     useEffect(() => {
-
-    }, [])
+        if(movieParam) {
+            setSingleMovie(movies.allMovies.find((movie:Movie) => transformTitle(movie.title).includes(movieParam)))
+        }
+    }, [movieParam])
 
     return (  
     <>
