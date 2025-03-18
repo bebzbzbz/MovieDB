@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+header {
+    margin-bottom: 3rem;
+}
+header h1 {
+    font-size: 8rem;
+}
+
+.inputs-wrapper {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+}
+
+header .inputs-wrapper input[type="text"] {
+    grid-column: span 5;
+}
+
+input, button {
+    padding: 1.2rem;
+    font-family: "Domine", serif;
+    letter-spacing: 1px;
+    text-align: center;
+    background-color: #fff;
+}
